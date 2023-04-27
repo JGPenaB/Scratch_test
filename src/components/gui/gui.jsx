@@ -40,6 +40,8 @@ import codeIcon from './icon--code.svg';
 import costumesIcon from './icon--costumes.svg';
 import soundsIcon from './icon--sounds.svg';
 
+import TutorialHeader from '../tutorial/TutorialHeader.jsx';
+
 const messages = defineMessages({
     addExtension: {
         id: 'gui.gui.addExtension',
@@ -240,6 +242,12 @@ const GUIComponent = props => {
                     onStartSelectingFileUpload={onStartSelectingFileUpload}
                     onToggleLoginOpen={onToggleLoginOpen}
                 />
+                
+                {/* Tutorial segment */}
+                <TutorialHeader 
+                    vm={vm}
+                />
+
                 <Box className={styles.bodyWrapper}>
                     <Box className={styles.flexWrapper}>
                         <Box className={styles.editorWrapper}>
